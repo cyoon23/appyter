@@ -11,8 +11,9 @@ class AutocompleteField(Field):
     :param value: (INTERNAL Any) The raw value of the field (from the form for instance)
     """
     def __init__(self, **kwargs):
-        super().__init__(**kwargs) 
+        kwargs["choices"] = None 
+        super().__init__(**kwargs)  
     
     def constraint(self):
-        import re
-        return self.raw_value is not None 
+        import re 
+        return self.raw_value is not None and self.raw_value

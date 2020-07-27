@@ -67,9 +67,9 @@ input[type=submit] {
 <body>
 
 <p>Search a protein-coding RNA:</p>
-
-<div class="autocomplete" style="width:300px;"> 
-<input id="myInput" type="text" name="geneSymbol" placeholder="Gene Symbol"> </div>
+<div class="autocomplete" style="width:300px;margin-bottom:20px"> 
+    <input id="myInput" class='form-control' type="text" name="gene_input" placeholder="Search Gene Symbol" /> 
+</div>
 
 <script src="{{ url_for('static', filename='RNA_names.json') }}"> </script>
 <script src="{{ url_for('static', filename='rna_drop_down.js') }}"></script>
